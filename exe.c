@@ -12,7 +12,6 @@ char **replac_arg0(char **args, char *full_path)
 {
 	free(args[0]);
 	args[0] = full_path;
-
 	return (args);
 }
 
@@ -26,10 +25,11 @@ void change_dir(char **args)
 
 	home = getenv("HOME");
 	if (args[1] == NULL)
-		chdir(home);
+	chdir(home);
 
 	else
-		chdir(args[1]);
+	chdir(args[1]);
+	
 	pwd = getcwd(buff, 0);
 	setenv("PWD", pwd, 1);
 	free(buff);
