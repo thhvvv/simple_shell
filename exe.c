@@ -29,7 +29,7 @@ void change_dir(char **args)
 
 	else
 	chdir(args[1]);
-	
+
 	pwd = getcwd(buff, 0);
 	setenv("PWD", pwd, 1);
 	free(buff);
