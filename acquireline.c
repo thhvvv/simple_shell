@@ -93,7 +93,7 @@ ssize_t read_buf(info_t *info, char *buf, size_t *i)
 {
 	ssize_t v = 0;
 
-	if (*v)
+	if (*i)
 	return (0);
 	v = read(info->readfd, buf, READ_BUF_SIZE);
 	if (v >= 0)
